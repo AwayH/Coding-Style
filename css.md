@@ -117,18 +117,32 @@ div.post { ... }
 
 ### 減少對 HTML 的依賴
 
-```css
+HTML:
+
+```html
 /* Bad */
-.nav li { ... }
-.nav a { ... }
-.form span { ... }
-.header nav { ... }
+<div class="form">
+  <p> ... </p>
+  <span> ... </span>
+</div>
 
 /* Good */
-.item { ... }
-.link { ... }
-.name { ... }
-.nav { ... }
+<div class="form">
+  <p class="form__desc"> ... </p>
+  <span class="form__name"> ... </span>
+</div>
+```
+
+CSS:
+
+```css
+/* Bad */
+.form p { ... }
+.form span { ... }
+
+/* Good */
+.form__desc { ... }
+.form__name { ... }
 ```
 
 ## class 命名方式
@@ -257,7 +271,7 @@ CSS:
 - 為選取器中的屬性添加雙引號，例如：<code>input[type="text"]</code>。
 - 避免為 0 值指定單位，例如：用 <code>margin: 0</code> 代替 <code>margin: 0px</code>。
 - 為字體加粗時，請以 <code>font-weight: 900</code> 代替 <code>font-weight: bold</code>。
-- 除了修飾符 (Modifier) 以外，其他 class 禁用 !important。
+- 除了修飾符 (Modifier) 以外，其他 class 禁用 <code>!important</code>。
 
 ```css
 /* 註解區域 */
@@ -269,6 +283,14 @@ CSS:
   background-color: rgba(0, 0, 0, .5);
   font-weight: 900;
   box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
+}
+
+.js-tab__item {
+  background-color: #fff!important;
+}
+
+.tab__item--active {
+  background-color: #fff!important;
 }
 ```
 ## 屬性類型的順序
