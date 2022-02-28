@@ -12,7 +12,7 @@
 
 ```css
 /* --- Base --- */
-  /* Normailize or Myerweb */
+  /* Normalize or Myerweb */
   /* Customer Reset CSS */
 
 /* --- Layout --- */
