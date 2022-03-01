@@ -362,6 +362,6 @@ CSS:
 .something {
   margin-left: auto;
   margin-right: auto;
-  bagkground-color: pink;
+  background-color: pink;
 }
 ```
